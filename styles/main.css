@@ -209,3 +209,26 @@ body.dark-mode code {
     background-color: #FCFCFC; /* VS Code light background color */
     color: #333333; /* VS Code dark text color */
 }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav-class {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-class li {
+        margin: 10px 0;
+    }
+
+    .width-wrap {
+        padding: 0 1em;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-class {
+        justify-content: center;
+    }
+}
