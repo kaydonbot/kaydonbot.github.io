@@ -105,7 +105,7 @@ body.dark-mode .header-class {
 
 /* Navigation styles */
 .nav-class {
-    display: flex;
+    display: none;
     justify-content: space-around;
     background-color: var(--header-footer-color-light);
     padding: 10px 0;
@@ -242,12 +242,5 @@ body.dark-mode code {
 @media (min-width: 769px) and (max-width: 1024px) {
     .nav-class {
         justify-content: center;
-    }
-}
-
-/* New styles for .nav-class on screens less than 600px wide */
-@media (max-width: 600px) {
-    .nav-class {
-        flex-direction: column;
     }
 }
