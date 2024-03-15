@@ -1,0 +1,302 @@
+</html><!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kaydonbot Documentation - Commands</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="author" content="Kayden Cormier -- K-GamesMedia" />
+    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="Normalize" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/accordion.css" />
+</head>
+
+<body class="body-class">
+
+    <header class="header-class">
+        <button class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <div class="title-div">
+            <h1>Welcome to Kaydonbot Documentation</h1>
+        </div>
+    
+        <div id="mode-toggle-container">
+            <button id="mode-toggle">
+                <img id="mode-icon" src="images/mode.png" alt="Toggle mode">
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav-class">
+        <div class="nav-list-div">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="getting-started.html">Getting Started</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="invite.html">Invite</a></li>
+                <li><a href="discord.html">Discord</a></li>
+                <li><a href="sourcecode.html">Github</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="width-wrap">
+        <main class="main-class">
+            <div class="intro-div">
+                <h1>Commands</h1>
+                <p>Here you will find a list of all available commands for Kaydonbot.</p>
+                <br/>
+                <p>Commands are divided into categories for easy navigation.</p>
+                <br/>
+                <p>Click on a category to view the commands within that category.</p>
+                <br/>
+                <p>For a list of all available commands, type <code>/commands</code> in your server.</p>
+                <br/>
+                <br/>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">General Commands</h2>
+                        <div class="accordion-content">
+                            <h3>General</h3>
+                            <br/>
+                            <p>These commands are available to all users.</p>
+                            <br/>
+                            <h4><code>/commands</code></h4>
+                            <p>Displays a list of all available commands.</p>
+                            <br/>
+                            <h4><code>/hello</code></h4>
+                            <p>Replies with a friendly greeting.</p>
+                            <br/>
+                            <h4><code>/quote</code></h4>
+                            <p>Replies with a random inspirational quote.</p>
+                            <br/>
+                            <h4><code>/joke</code></h4>
+                            <p>Replies with a random joke.</p>
+                            <br/>
+                            <h4><code>/weather [location]</code></h4>
+                            <p>Replies with the current weather in the specified location.</p>
+                            <br/>
+                            <h4><code>/reminder [time] [reminder]</code></h4>
+                            <p>Sets a reminder for the specified time and reminder message.</p>
+                            <br/>
+                            <h4><code>/poll [question] [options]</code></h4>
+                            <p>Creates a poll with the specified question and options.</p>
+                            <br/>
+                            <h4><code>/random [choices]</code></h4>
+                            <p>Chooses a random option from the specified choices.</p>
+                            <br/>
+                            <h4><code>/userinfo [user]</code></h4>
+                            <p>Displays information about the specified user.</p>
+                            <br/>
+                            <h4><code>/serverinfo</code></h4>
+                            <p>Displays information about the current server.</p>
+                            <br/>
+                            <!-- Add more commands here -->
+                            <h3>Scream Commands</h3>
+                            <h4><code>/scream</code></h4>
+                            <p>Replies with a random scream from a list.</p>
+                            <br/>
+                            <h4><code>/screamedit [scream]</code></h4>
+                            <p>adds the specified scream to the list.</p>
+                            <br/>
+                            <h3>Birthday Commands</h3>
+                            <h4><code>/birthday [date]</code></h4>
+                            <p>Adds your birthday to the database, birthdays must be in yyyy-mm-dd format</p>
+                            <br/>
+                            <h4><code>/upcoming birthdays</code></h4>
+                            <p>Displays the upcoming birthdays in the server in the next 180 days.</p>
+                            <br/>
+                            <h4><code>/deletebirthday</code></h4>
+                            <p>Deletes your birthday from the database.</p>
+                            <br/>
+                            <h4><code>/birthdaylist</code></h4>
+                            <p>Displays the list of birthdays in the server.</p>
+                            <br/>
+                            <!-- Add more commands here -->
+                            <h3>OpenAI Commands</h3>
+                            <h4><code>/chat [message]</code></h4>
+                            <p>Chat with the bot using OpenAI's GPT-3.5-turbo</p>
+                            <br/>
+                            <h4><code>/dalle [prompt]</code></h4>
+                            <p>Generates an image using OpenAI's DALL-E-3.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">Moderation Commands</h2>
+                        <div class="accordion-content">
+                            <h3>Moderator/Admin Cmds</h3>
+                            <br/>
+                            <p>These commands are available to moderators and administrators.</p>
+                            <br/>
+                            <h4><code>/welcomeconfig</code></h4>
+                            <p>Configures the welcome message for the server.</p>
+                            <br/>
+                            <h4><code>/msgclear [channel] [number]</code></h4>
+                            <p>Clears the specified number of messages from the specified channel.</p>
+                            <br/>
+                            <h4><code>/mute [member] [duration] [reason]</code></h4>
+                            <p>Mutes the specified member for the specified duration and reason.</p>
+                            <br/>
+                            <h4><code>/unmute [member]</code></h4>
+                            <p>Unmutes the specified member.</p>
+                            <br/>
+                            <h4><code>/kick [member] [reason]</code></h4>
+                            <p>Kicks the specified member for the specified reason.</p>
+                            <br/>
+                            <h4><code>/ban [member] [reason]</code></h4>
+                            <p>Bans the specified member for the specified reason.</p>
+                            <br/>
+                            <h4><code>/unban [member]</code></h4>
+                            <p>Unbans the specified member.</p>
+                            <br/>
+                            <h4><code>/warn [member] [reason]</code></h4>
+                            <p>Warns the specified member for the specified reason.</p>
+                            <br/>
+                            <h4><code>/lock [channel]</code></h4>
+                            <p>Locks the specified channel.</p>
+                            <br/>
+                            <h4><code>/unlock [channel]</code></h4>
+                            <p>Unlocks the specified channel.</p>
+                            <br/>
+                            <h4><code>/slowmode [channel] [duration]</code></h4>
+                            <p>Sets the slowmode for the specified channel.</p>
+                            <br/>
+                            <h4><code>/purgeuser [channel] [member] [number]</code></h4>
+                            <p>Deletes the specified number of messages from the specified member in the specified channel.</p>
+                            <br/>
+                            <h4><code>/announce [channel] [message]</code></h4>
+                            <p>Announces the specified message in the specified channel.</p>
+                            <br/>
+                            <h4><code>/addrole [member] [role]</code></h4>
+                            <p>Adds the specified role to the specified member.</p>
+                            <br/>
+                            <h4><code>/removerole [member] [role]</code></h4>
+                            <p>Removes the specified role from the specified member.</p>
+                            <br/>
+                            <h4><code>/hardban</code></h4>
+                            <p>initiates a setup to add a userid to auto-kick a user on join to the server</p>
+                            <!-- Add more commands here -->
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">Developer Commands</h2>
+                        <div class="accordion-content">
+                            <h3>Developer Commands for Everyone</h3>
+                            <br/>
+                            <h4><code>/sourcecode</code></h4>
+                            <p>Returns the GitHub repository.</p>
+                            <br/>
+                            <h4><code>/support</code></h4>
+                            <p>Returns the support server invite link.</p>
+                            <br/>
+                            <h4><code>/invite</code></h4>
+                            <p>Returns the invite link.</p>
+                            <br/>
+                            <h4><code>/ping</code></h4>
+                            <p>Gets the bot's current ping.</p>
+                            <br/>
+                            <h4><code>/uptime</code></h4>
+                            <p>Gets the bot's current uptime.</p>
+                            <br/>
+                            <h4><code>/botinfo</code></h4>
+                            <p>Gets the bot's current info.</p>
+                            <br/>
+                            <h4><code>/openticket</code></h4>
+                            <p>Opens a ticket for support.</p>
+                            <br/>
+                            <h4><code>/closeticket</code></h4>
+                            <p>Closes a ticket (Only Admins/Mods can close tickets).</p>
+                            <br/>
+                            <h3>Developer Commands Available to Authorized Users Only</h3>
+                            <br/>
+                            <h4><code>/leaveguild</code></h4>
+                            <p>Leaves the current server.</p>
+                            <br/>
+                            <h4><code>/restart</code></h4>
+                            <p>Restarts the bot.</p>
+                            <br/>
+                            <h4><code>/shutdown</code></h4>
+                            <p>Shuts down the bot.</p>
+                            <br/>
+                            <h4><code>/botupdate</code></h4>
+                            <p>Updates the bot.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">Fortnite Commands</h2>
+                        <div class="accordion-content">
+                            <h3>Commands for Fortnite Related Content</h3>
+                            <br/>
+                            <h4><code>/fnshopcurrent</code></h4>
+                            <p>Returns the current item shop.</p>
+                            <br/>
+                            <h4><code>/fnshopseen [itemname]</code></h4>
+                            <p>Returns information on the item, specifically its last seen info.</p>
+                            <br/>
+                            <h4><code>/fnshopupcoming</code></h4>
+                            <p>Returns the upcoming item shop.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">Bot Games Commands</h2>
+                        <div class="accordion-content">
+                            <h3>Fun Games You Can Play with the Bot</h3>
+                            <br/>
+                            <h4><code>/battle</code></h4>
+                            <p>Start a battle game.</p>
+                            <br/>
+                            <h4><code>/rps</code></h4>
+                            <p>Play a game of Rock, Paper, Scissors.</p>
+                            <br/>
+                            <h4><code>/tictactoe</code></h4>
+                            <p>Play a game of Tic Tac Toe.</p>
+                            <br/>
+                            <h4><code>/blackjack</code></h4>
+                            <p>Play a game of blackjack.</p>
+                            <br/>
+                            <h4><code>/wouldyourather</code></h4>
+                            <p>Play a round of Would You Rather.</p>
+                            <br/>
+                            <h4><code>/truthordare</code></h4>
+                            <p>Play a fun little Truth or Dare game.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">Suggestions Commands</h2>
+                        <div class="accordion-content">
+                            <h3>Commands to Suggest New Features or Content for the Bot</h3>
+                            <br/>
+                            <h4><code>/cmdsuggestion [Suggestion]</code></h4>
+                            <p>Suggest a new command.</p>
+                            <br/>
+                            <h4><code>/tdsuggestion [option] {truth/dare} [suggestion]</code></h4>
+                            <p>Suggest a SFW Truth or Dare.</p>
+                            <br/>
+                            <h4><code>/wyrsuggestion [suggestion]</code></h4>
+                            <p>Suggest a 'Would You Rather' question.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer-class">
+        <div class="foot">
+            <p id="copyright">Copyright © 2024 All rights reserved - K-GamesMedia</p>
+        </div>
+    </footer>
+
+    <script src="scripts/copyright.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/darkmode.js"></script>
+    <script src="scripts/accordion.js"></script>
+</body>
+
+</html>
