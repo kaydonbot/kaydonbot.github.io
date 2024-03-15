@@ -6,6 +6,13 @@
     --background-color-dark: #333333;
     --header-footer-color-light: #ffff00;
     --header-footer-color-dark: #FFD700;
+    --link-color-light: #333; 
+    --link-color-dark: #FFD700; 
+}
+
+a {
+    color: var(--link-color-light);
+    text-decoration: none;
 }
 
 /* General body styles */
@@ -153,6 +160,11 @@ body.dark-mode .nav-class a {
 
 body.dark-mode .width-wrap {
     background-color: var(--background-color-dark);
+}
+
+/* New styles for hyperlinks in dark mode */
+body.dark-mode a {
+    color: var(--link-color-dark);
 }
 
 /* Main content styles */
