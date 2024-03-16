@@ -9,9 +9,16 @@
     --link-color-light: #FFD700; 
     --link-color-dark: #09e1ec; 
 }
-a {
-    color: #FFD700;
+
+/* Styles for hyperlinks in light mode */
+body:not(.dark-mode) a {
+    color: var(--link-color-light);
     text-decoration: none;
+}
+
+/* Styles for hyperlinks in dark mode */
+body.dark-mode a {
+    color: var(--link-color-dark);
 }
 
 /* General body styles */
@@ -159,11 +166,6 @@ body.dark-mode .nav-class a {
 
 body.dark-mode .width-wrap {
     background-color: var(--background-color-dark);
-}
-
-/* New styles for hyperlinks in dark mode */
-body.dark-mode a {
-    color: #09e1ec;
 }
 
 /* Main content styles */
