@@ -67,7 +67,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">General Commands</h2>
                         <div class="accordion-content">
-                            <h3>General</h3>
+                                <h3>General</h3>
                             <br/>
                             <p>These commands are available to all users.</p>
                             <br/>
@@ -86,8 +86,13 @@
                             <h4><code>/weather [location]</code></h4>
                             <p>Replies with the current weather in the specified location.</p>
                             <br/>
-                            <h4><code>/reminder [time] [reminder]</code></h4>
+                            <h4><code>/reminder [date] [time] [timezone] [reminder]</code></h4>
                             <p>Sets a reminder for the specified time and reminder message.</p>
+                            <p>NOTE: use 24 hour time format and the date format yyyy-mm-dd, for example, to set a reminder for 4:30pm EST on April 1st, 2024 you would do the following:</p>
+                            <p><code>/reminder 2024-04-01 16:30:00 EST reminder</code></p>
+                            <br/>
+                            <h4><code>/reminders</code></h4>
+                            <p>Retrieves the list of reminders from the database and puts them in an embed </p>
                             <br/>
                             <h4><code>/poll [question] [options]</code></h4>
                             <p>Creates a poll with the specified question and options.</p>
@@ -102,7 +107,7 @@
                             <p>Displays information about the current server.</p>
                             <br/>
                             <!-- Add more commands here -->
-                            <h3>Scream Commands</h3>
+                                <h3>Scream Commands</h3>
                             <br>
                             <h4>WARNING: USE AT OWN RISK, THE SCREAMS ARE GLOBAL, WE HAVE LOTS OF PROTECTION AGAINST NSFW, RACISM, AND OTHER THINGS AGAINST TOS IN PLACE, BUT PEOPLE WILL FIND A WAY. WE TRY TO REMOVE ANY THAT GET THROUGH BUT IT COULD TAKE US SOME TIME. THANKS FOR UNDERSTANDING :)</h4>
                             <br/>
@@ -126,12 +131,34 @@
                             <p>Displays the list of birthdays in the server.</p>
                             <br/>
                             <!-- Add more commands here -->
-                            <h3>OpenAI Commands-- IMPORTANT: CURRENTLY UNDER REPAIRS, DO NOT WORK</h3>
+                                <h3>OpenAI Commands-- IMPORTANT: CURRENTLY UNDER REPAIRS, DO NOT WORK</h3>
                             <h4><code>/chat [message]</code></h4>
                             <p>Chat with the bot using OpenAI's GPT-3.5-turbo</p>
                             <br/>
                             <h4><code>/dalle [prompt]</code></h4>
                             <p>Generates an image using OpenAI's DALL-E-3.</p>
+                            <br/>
+                                <h3>Nav Commands</h3>
+                            <h4><code>/listgeneral</code></h4>
+                            <p>Gives the embed for page 1 of general commands</p>
+                            <br/>
+                            <h4><code>/listgeneral2</code></h4>
+                            <p>Gives the embed for page 2 of general commands</p>
+                            <br/>
+                            <h4><code>/listmod</code></h4>
+                            <p>Gives the embed for the page of moderator commands</p>
+                            <br/>
+                            <h4><code>/listdev</code></h4>
+                            <p>Gives the embed for the page of dev commands</p>
+                            <br/>
+                            <h4><code>/listbotgames</code></h4>
+                            <p>Gives the embed for the page of bot games commands</p>
+                            <br/>
+                            <h4><code>/listfn</code></h4>
+                            <p>Gives the embed for the list of fortnite related commands</p>
+                            <br/>
+                            <h4><code>/listsuggestions</code></h4>
+                            <p>Gives the embed for the list of suggestion commands</p>
                         </div>
                     </div>
                     <div class="accordion-item">
