@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kaydonbot Changelog</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-TileColor" content="#00aba9" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="author" content="Kayden Cormier -- K-GamesMedia" />
+    <link rel="stylesheet" href="styles/main.css"/>
+    <link rel="Normalize" href="styles/normalize.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body class="body-class">
+
+    <header class="header-class">
+        <button class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <div class="title-div">
+            <h1>Kaydonbot Changelog</h1>
+        </div>
+    
+        <div id="mode-toggle-container">
+            <button id="mode-toggle">
+                <img id="mode-icon" src="images/mode.png" alt="Toggle mode">
+            </button>
+        </div>
+    </header>
+
+    <nav class="nav-class">
+        <div class="nav-list-div">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="getting-started.html">Getting Started</a></li>
+                <li><a href="commands.html">Commands</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="invite.html">Invite</a></li>
+                <li><a href="discord.html">Discord</a></li>
+                <li><a href="sourcecode.html">Github</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="width-wrap">
+        <main class="main-class">
+            <div class="intro-div">
+                <h2>Changelog</h2>
+                <div id="changelog-container">
+                    <!-- Changelog content will be inserted here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer-class">
+        <div class="foot">
+            <p id="copyright">Copyright © 2024 All rights reserved - K-GamesMedia</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            async function fetchReleases() {
+                try {
+                    const response = await fetch('https://api.github.com/repos/Kaydonbob03/kaydonbot/releases');
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const releases = await response.json();
+                    console.log('Releases:', releases); // Log the releases to check the response
+                    return releases;
+                } catch (error) {
+                    console.error('Error fetching releases:', error);
+                }
+            }
+
+            function renderChangelog(releases) {
+                const container = document.getElementById('changelog-container');
+                if (!releases || releases.length === 0) {
+                    container.innerHTML = '<p>No releases found.</p>';
+                    return;
+                }
+                releases.forEach(release => {
+                    const releaseDiv = document.createElement('div');
+                    releaseDiv.classList.add('release');
+
+                    const title = document.createElement('h3');
+                    title.textContent = release.name;
+                    releaseDiv.appendChild(title);
+
+                    const date = document.createElement('p');
+                    date.textContent = new Date(release.published_at).toLocaleDateString();
+                    releaseDiv.appendChild(date);
+
+                    const body = document.createElement('div');
+                    body.innerHTML = marked.parse(release.body); // Use marked.parse to convert markdown to HTML
+                    releaseDiv.appendChild(body);
+
+                    container.appendChild(releaseDiv);
+
+                    // Add a line between releases
+                    const separator = document.createElement('p');
+                    separator.style.textAlign = 'center';
+                    separator.textContent = '~~~';
+                    container.appendChild(separator);
+                });
+            }
+
+            async function init() {
+                const releases = await fetchReleases();
+                renderChangelog(releases);
+            }
+
+            init();
+        });
+    </script>
+    <script src="scripts/copyright.js"></script>
+    <script src="scripts/hamburger.js"></script>
+    <script src="scripts/darkmode.js"></script>
+</body>
+
+</html>
